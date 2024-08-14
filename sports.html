@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자유여행/스포츠 페이지</title>
+    <link rel="stylesheet" href="css/sports.css" type="text/css" />
+    <script src="javascript/jquery-1.12.3.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 헤더 -->
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/로고.png" alt="로고" />
+          </a>
+        </div>
+        <div class="menu">
+          <nav>
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">마이페이지</a></li>
+              <li><a href="#">멤버쉽</a></li>
+              <li><a href="#">즐겨찾기</a></li>
+              <li><a href="#">사이트맵</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- 메인 내용 -->
+      <main>
+        <ul class="submenu">
+          <li><a href="#">승차권</a></li>
+          <li><a href="#">관광열차</a></li>
+          <li><a href="sports.html">자유여행/스포츠</a></li>
+          <li><a href="#">여행상품</a></li>
+          <li><a href="#">종합이용안내</a></li>
+        </ul>
+        <div class="main-buttons">
+          <a href="#">예매하기</a>
+          <a href="#">야구 톡톡</a>
+        </div>
+
+        <h1>삼성 라이온즈</h1>
+        <a href="#" class="other-team-btn">다른 팀 선택</a>
+        <!-- 팀 정보 -->
+        <section class="team-info">
+          <h2>팀 정보</h2>
+          <p><strong>연고지:</strong> 대구광역시</p>
+          <p><strong>홈구장:</strong> 대구 삼성 라이온즈 파크</p>
+          <p><strong>감독:</strong> 박진만</p>
+        </section>
+
+        <section class="player-profile">
+          <!-- 선수 정보 -->
+          <div class="player-details">
+            <div class="player-detail">
+              <a href="#">
+                <img src="images/김영웅.png" alt="김영웅" />
+                <p><strong>김영웅</strong></p>
+                <p>포지션: 내야수</p>
+                <p>생년월일: 2003년 08월 24일</p>
+              </a>
+            </div>
+            <div class="player-detail">
+              <a href="#">
+                <img src="images/김지찬.png" alt="김지찬" />
+                <p><strong>김지찬</strong></p>
+                <p>포지션: 내야수</p>
+                <p>생년월일: 2001년 03월 08일</p>
+              </a>
+            </div>
+            <div class="player-detail">
+              <a href="#">
+                <img src="images/김현준.png" alt="김현준" />
+                <p><strong>김현준</strong></p>
+                <p>포지션: 외야수</p>
+                <p>생년월일: 2002년 10월 11일</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- 경기 일정 -->
+        <section>
+          <h2>경기 일정</h2>
+          <table class="schedule">
+            <thead>
+              <tr>
+                <th>날짜</th>
+                <th>상대</th>
+                <th>장소</th>
+                <th>시작 시간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024-07-01</td>
+                <td>KT 위즈</td>
+                <td>대구 삼성 라이온즈 파크</td>
+                <td>18:30</td>
+              </tr>
+              <tr>
+                <td>2024-07-03</td>
+                <td>LG 트윈스</td>
+                <td>잠실 야구장</td>
+                <td>19:00</td>
+              </tr>
+              <tr>
+                <td>2024-07-05</td>
+                <td>두산 베어스</td>
+                <td>대구 삼성 라이온즈 파크</td>
+                <td>18:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- 푸터 -->
+      <footer>
+        <div class="footer-logo">
+          <img src="images/btlogo.png" alt="푸터 로고" />
+        </div>
+
+        <div class="footer-inner">
+          <div class="copy">
+            &copy; 2024 삼성 라이온즈. All rights reserved.
+          </div>
+          <div class="site">
+            <div class="sns">
+              <a href="#">
+                <img src="images/sns1.jpg" alt="sns1" />
+              </a>
+              <a href="#">
+                <img src="images/sns2.jpg" alt="sns2" />
+              </a>
+              <a href="#">
+                <img src="images/sns3.jpg" alt="sns3" />
+              </a>
+            </div>
+            <div class="familysite">
+              <select name="familysite">
+                <option value="familysite1">네이버</option>
+                <option value="familysite2">카카오</option>
+                <option value="familysite3">티켓링크</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

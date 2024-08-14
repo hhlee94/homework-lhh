@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+/* css 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+  position: relative;
+  height: 100px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 200px 1000px;
+  background-color: #ccc6bc;
+  margin-top: 10px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.menu {
+  position: relative;
+  z-index: 2;
+}
+.menu nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.menu nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.menu nav > ul > li {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+.menu nav > ul > li > a:hover {
+  background-color: #a29a8c;
+  color: #fff;
+}
+
+/* 메인 */
+main {
+  position: relative;
+}
+
+.submenu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.submenu li {
+  margin: 10px 20px;
+}
+.submenu li a {
+  text-decoration: none;
+  display: flex;
+  padding-right: 20px;
+  color: black;
+}
+.submenu li a:hover {
+  background-color: #a29a8c;
+}
+
+.main-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* slide */
+.slide {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.slide-list {
+  display: flex;
+  width: 300%;
+  height: 100%;
+}
+.slide-list li {
+  display: flex;
+  position: relative;
+}
+.slide-list img {
+  width: 1200px;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-list span {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* contents */
+.contents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d6cfcb;
+  padding: 30px;
+}
+.notice {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+.notice ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.notice li:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.notice li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice li a:hover {
+  font-weight: bold;
+}
+.gallery-notice {
+  margin-top: 20px; /* 갤러리 위 여백 설정 */
+}
+
+.gallery-notice .title {
+  font-size: 16px; /* 제목의 글자 크기 설정 */
+  margin-bottom: 10px; /* 제목 아래 여백 설정 */
+}
+
+.gallery-notice .gallery-img {
+  display: flex; /* 이미지들을 가로로 나열하기 위해 flex 속성 사용 */
+}
+
+.gallery-notice .gallery-img a {
+  flex: 1; /* 각 이미지 박스의 너비를 동일하게 설정 */
+  margin-right: 10px; /* 이미지 박스 사이의 오른쪽 여백 설정 */
+  position: relative; /* 이미지와 텍스트의 위치를 상대적으로 조정 */
+}
+
+.gallery-notice .gallery-img a:last-child {
+  margin-right: 0; /* 마지막 이미지 박스의 오른쪽 여백 제거 */
+}
+
+.gallery-notice .gallery-img img {
+  width: 100px; /* 이미지가 부모 요소에 맞게 크기가 조정됩니다. */
+  height: 100px; /* 이미지 비율을 유지하며 크기가 조정됩니다. */
+  display: block; /* 인라인 요소를 블록 요소로 변환하여 이미지 사이의 공백을 제거합니다. */
+  border-radius: 5px; /* 이미지 모서리를 둥글게 만듭니다. */
+}
+.gallery-notice .gallery-img img:hover {
+  opacity: 0.5;
+}
+
+.gallery-notice .gallery-img span {
+  position: absolute; /* 텍스트의 위치를 절대적으로 조정합니다. */
+  bottom: 5px; /* 아래쪽 여백을 설정합니다. */
+  left: 0; /* 왼쪽 여백을 설정합니다. */
+  right: 0; /* 오른쪽 여백을 설정합니다. */
+  text-align: center; /* 텍스트를 가운데 정렬합니다. */
+  background-color: rgba(0, 0, 0, 0.5); /* 배경색 및 투명도 설정 */
+  color: #fff; /* 텍스트 색상 설정 */
+  padding: 5px 0; /* 텍스트의 패딩 설정 */
+}
+.discount-products {
+  margin-top: 20px; /* 위쪽 여백 설정 */
+  margin-right: 30px;
+}
+
+.discount-products h2 {
+  font-size: 24px; /* 제목 글자 크기 설정 */
+  text-align: center; /* 제목 가운데 정렬 */
+}
+
+.discount-products ul {
+  list-style: none; /* 목록 마커 제거 */
+  padding: 0; /* 목록 패딩 제거 */
+  text-align: center; /* 항목 가운데 정렬 */
+}
+
+.discount-products li {
+  margin-bottom: 10px; /* 각 항목 아래 여백 설정 */
+}
+
+.discount-products li a {
+  font-size: 18px; /* 항목 글자 크기 설정 */
+  text-decoration: none; /* 링크 텍스트에 밑줄 제거 */
+  color: #333; /* 기본 텍스트 색상 설정 */
+  box-sizing: border-box;
+  border: 1px solid #333;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.discount-products li a:hover {
+  color: #007bff; /* 호버 시 텍스트 색상 변경 */
+}
+
+/* footer */
+footer {
+  background-color: #f0f0f0; /* 배경색 설정 */
+  padding: 20px; /* 내부 여백 설정 */
+  display: flex;
+  justify-content: space-between; /* 요소들을 가로 방향으로 균등하게 배치 */
+  align-items: center; /* 수직 정렬을 중앙으로 설정 */
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  flex: 0 0 auto; /* 유연한 크기 설정 */
+}
+
+.footer-inner {
+  flex: 1; /* 남은 공간을 모두 차지 */
+  display: flex;
+  padding: 10px;
+  justify-content: center; /* 요소들을 가로 방향으로 중앙 정렬 */
+  align-items: center; /* 수직 정렬을 중앙으로 설정 */
+}
+
+.copy {
+  margin-right: auto; /* 자동 여백 설정으로 중앙 정렬을 위한 왼쪽 여백 제거 */
+}
+
+.sns {
+  display: flex; /* SNS 이미지들을 가로로 배열하기 위해 플렉스 박스로 설정 */
+}
+
+.sns a {
+  margin-right: 10px; /* 각 이미지 사이의 간격 설정 */
+}
+
+.familysite select {
+  width: 100px; /* select 요소의 너비 설정 */
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+/* modal */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+#modal.active {
+  display: block;
+}
+.modal-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.modal-body {
+  font-size: 14px;
+  line-height: 1.75;
+}
+.btn {
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
